@@ -55,9 +55,76 @@ else {
 
 operaterx('-', 8, 1);
 
-
-const numberStorage={};
-
+let appendinput;
 const btn1= document.querySelector('#one');
-btn1.addEventListener('click',appendigit);
+btn1.addEventListener('click',function()
+{
+appendinput=1;
+console.log(appendinput);
+}
+);
+const btn2= document.querySelector('#two');
+btn2.addEventListener('click',function()
+{
+appendinput=2;
+console.log(appendinput);
+}
+);
+const btn3= document.querySelector('#three');
+btn3.addEventListener('click',function()
+{
+appendinput=3;
+console.log(appendinput);
+}
+);
+const btn4= document.querySelector('#four');
+btn4.addEventListener('click',function()
+{
+appendinput=4;
+console.log(appendinput);
+}
+);
+const btn5= document.querySelector('#five');
+btn5.addEventListener('click',function()
+{
+appendinput=5;
+console.log(appendinput);
+}
+);
+const btn6= document.querySelector('#six');
+btn6.addEventListener('click',function()
+{
+appendinput=6;
+console.log(appendinput);
+}
+);
+const btn7= document.querySelector('#seven');
+btn7.addEventListener('click',function()
+{
+appendinput=7;
+console.log(appendinput);
+}
+);
+const btn8= document.querySelector('#eight');
+btn8.addEventListener('click',function()
+{
+appendinput=8;
+console.log(appendinput);
+}
+);
+const btn9= document.querySelector('#nine');
+btn9.addEventListener('click',function()
+{
+appendinput=9;
+console.log(appendinput);
+}
+);
+const btn0= document.querySelector('#zero');
+btn0.addEventListener('click',function()
+{
+appendinput=0;
+console.log(appendinput);
+}
+);
+
 
