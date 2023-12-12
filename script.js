@@ -2,8 +2,9 @@
 let addi;
 function add(a, b)
 {
-    addi = a+b;
+   addi = a+b;
    return addi;
+
 }
 
 let subtracti;
@@ -54,4 +55,9 @@ else {
 
 operaterx('-', 8, 1);
 
+
+const numberStorage={};
+
+const btn1= document.querySelector('#one');
+btn1.addEventListener('click',appendigit);
 
