@@ -57,6 +57,12 @@ operaterx('-', 8, 1);
 
 let appendinput;
 let appendoperater;
+const plus = document.querySelector('#plus');
+plus.addEventListener('click',function()
+{
+    appendoperater='+';
+    displayop(appendoperater);
+});
 
 const btn1= document.querySelector('#one');
 btn1.addEventListener('click',function()
@@ -128,18 +134,40 @@ appendinput=0;
 displayval(appendinput);
 }
 );
-let dispv;
-
+let dispv=0;  
+let dispv1=0;
+let storev;
+let count=1;
 let sd= document.getElementById("sd");
 //sd.innerHTML+="<p> ji </p>";
 
 function displayval(appendinput)
 {
-    sd.innerHTML= ' ';
-    console.log(appendinput);
+  if(count%2!=0)
+   {
+    count++;
     dispv=appendinput;
-    sd.innerHTML+="<h4>" + dispv + "</h4>";
+    sd.innerHTML+="<h4>" + appendinput + "</h4>";
     return dispv;
+   }
+
+    else {
+    count++;
+    console.log(appendinput);
+    dispv1=appendinput;
+    console.log(dispv1);
+    sd.innerHTML+="<h4> hello this is v2 " + appendinput + "</h4>";
+    return dispv1; 
+    }
+}
+
+
+function displayop(appendoperater)
+{
+    console.log(appendoperater);
+    dispop=appendoperater;
+    sd.innerHTML+="<h4>" + dispop + "</h4>";
+    return dispop;
 }
 
 
