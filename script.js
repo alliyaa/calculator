@@ -147,7 +147,7 @@ function displayval(appendinput)
    {
     count++;
     dispv=appendinput;
-    sd.innerHTML+="<h4>" + appendinput + "</h4>";
+    sd.innerHTML+="<h4>" + dispv + "</h4>";
     return dispv;
    }
 
@@ -156,7 +156,7 @@ function displayval(appendinput)
     console.log(appendinput);
     dispv1=appendinput;
     console.log(dispv1);
-    sd.innerHTML+="<h4> hello this is v2 " + appendinput + "</h4>";
+    sd.innerHTML+="<h4> hello this is v2 " + dispv1 + "</h4>";
     return dispv1; 
     }
 }
@@ -169,5 +169,7 @@ function displayop(appendoperater)
     sd.innerHTML+="<h4>" + dispop + "</h4>";
     return dispop;
 }
+
+operaterx(appendoperater,dispv,dispv1);
 
 
