@@ -1,4 +1,4 @@
-
+let sd= document.getElementById("sd");
 let addi;
 function add(a, b)
 {
@@ -53,14 +53,45 @@ else {
 
 }
 
-operaterx('-', 8, 1);
+
 
 let appendinput;
 let appendoperater;
+const clear = document.querySelector('#clear');
+clear.addEventListener('click',function()
+{ 
+    clearf()
+});
+const equal = document.querySelector('#equal');
+equal.addEventListener('click',function()
+{
+    appendoperater='=';
+    displayop(appendoperater);
+});
 const plus = document.querySelector('#plus');
 plus.addEventListener('click',function()
 {
     appendoperater='+';
+    displayop(appendoperater);
+});
+
+const minus = document.querySelector('#minus');
+minus.addEventListener('click',function()
+{
+    appendoperater='-';
+    displayop(appendoperater);
+});
+
+const multiple = document.querySelector('#multiply');
+multiple.addEventListener('click',function()
+{
+    appendoperater='*';
+    displayop(appendoperater);
+});
+const division = document.querySelector('#divide');
+division.addEventListener('click',function()
+{
+    appendoperater='/';
     displayop(appendoperater);
 });
 
@@ -132,44 +163,125 @@ btn0.addEventListener('click',function()
 {
 appendinput=0;
 displayval(appendinput);
-}
-);
+});
+
+
+
+
 let dispv=0;  
 let dispv1=0;
 let storev;
 let count=1;
-let sd= document.getElementById("sd");
-//sd.innerHTML+="<p> ji </p>";
 
+const decimalpt= document.querySelector('#decimal');
+decimalpt.addEventListener('click',function()
+{
+    if(count%2==0)
+   { count=-1;
+   }
+   else if(count%2!=0)
+   { count=-2;
+   }
+    displayop('.');
+});
+
+
+
+function displayvaldot(appendinput)
+{
+count+=3;
+dispv=(((dispv*10)+appendinput)/10);
+console.log(dispv);
+sd.innerHTML+=dispv;
+console.log("in display valdot function  count"+ count);
+return dispv;
+}
+
+function displayvaldot1(appendinput)
+{
+//count--;
+console.log(dispv1);
+console.log(appendinput);
+dispv1=(((dispv1*10)+appendinput)/10);
+console.log(dispv1);
+sd.innerHTML+=dispv1;
+console.log("in display valdot function 1 count"+ count);
+return dispv1;
+}
+
+
+let dotnumber;
 function displayval(appendinput)
 {
-  if(count%2!=0)
+   
+
+ if(count===-1 && count%2!=0) {
+        displayvaldot(appendinput);
+        }
+
+   else if(count%2!=0 && count>0)
    {
     count++;
+    console.log("in display val function 1 count"+ count);
     dispv=appendinput;
     sd.innerHTML+="<h4>" + dispv + "</h4>";
     return dispv;
    }
 
-    else {
-    count++;
-    console.log(appendinput);
-    dispv1=appendinput;
-    console.log(dispv1);
-    sd.innerHTML+="<h4> hello this is v2 " + dispv1 + "</h4>";
-    return dispv1; 
+    else if(count>0 && count%2==0) {
+
+        count++;
+        console.log("in display val function 2 count"+ count);
+        dispv1=appendinput;
+        sd.innerHTML+="<h4>" + dispv1 + "</h4>";
+        return dispv1;
     }
+
+    else{
+        displayvaldot1(appendinput);
+    }
+      
 }
 
-
+let dispop=' ';
 function displayop(appendoperater)
 {
+    if(appendoperater==='=')
+    {
+        displayresult();
+        //clearf();
+    }
+    /*else if(appendoperater==='.')
+    {
+       
+        console.log(appendoperater);
+        console.log(count);
+        dispop=appendoperater;
+        sd.innerHTML+="<h4>" + dispop + "</h4>";
+        return dispop;
+    }*/
+    else{
     console.log(appendoperater);
     dispop=appendoperater;
     sd.innerHTML+="<h4>" + dispop + "</h4>";
     return dispop;
+    }
 }
 
-operaterx(appendoperater,dispv,dispv1);
 
+
+function displayresult(){
+
+let result = operaterx(dispop,dispv,dispv1);
+sd.innerHTML+= '=' + result;
+console.log(result);
+}
+
+
+
+function clearf()
+{
+    count=0;
+    sd.innerHTML=' ';
+}
 
