@@ -182,7 +182,7 @@ decimalpt.addEventListener('click',function()
    else if(count%2!=0)
    { count=-2;
    }
-    displayop('.');
+  
 });
 
 
@@ -251,15 +251,7 @@ function displayop(appendoperater)
         displayresult();
         //clearf();
     }
-    /*else if(appendoperater==='.')
-    {
-       
-        console.log(appendoperater);
-        console.log(count);
-        dispop=appendoperater;
-        sd.innerHTML+="<h4>" + dispop + "</h4>";
-        return dispop;
-    }*/
+   
     else{
     console.log(appendoperater);
     dispop=appendoperater;
@@ -273,6 +265,9 @@ function displayop(appendoperater)
 function displayresult(){
 
 let result = operaterx(dispop,dispv,dispv1);
+console.log(dispop);
+console.log(dispv);
+console.log(dispv1);
 sd.innerHTML+= '=' + result;
 console.log(result);
 }
