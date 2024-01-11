@@ -1,7 +1,52 @@
+*{
+  background-color: rgb(37, 4, 45);
+}
+
+h1{
+  text-align: center;
+  color: azure;
+}
+
 .maincalc{
+  
   display:flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(102, 192, 192);
+  height: 100vh;
+  color: azure;
+  margin-top: -130px;
+  
+}
+
+button{
+
+ 
+  border-radius: 70%;
+  color: azure;
+  font-weight: bold;
+  width:60px;
+  height:60px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover{
+  background-color: #ef2af3;
+}
+
+.op:hover{
+  background-color: #4570e8;
+}
+
+
+#sd{
+  font-size:25px ;
+  color: azure;
+  display:flex;
+  justify-content: center;
+  flex-direction: row;  
+  align-items: center;
+  height: 100vh;
+  margin-top:-450px;
 }
