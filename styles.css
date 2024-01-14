@@ -1,5 +1,5 @@
 *{
-  background-color: rgb(37, 4, 45);
+  background-color: rgb(1, 0, 1);
 }
 
 h1{
@@ -32,11 +32,11 @@ button{
 }
 
 button:hover{
-  background-color: #ef2af3;
+  background-color: #f7bbf8;
 }
 
 .op:hover{
-  background-color: #4570e8;
+  background-color: #a9bffb;
 }
 
 

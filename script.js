@@ -12,14 +12,50 @@ function add(a, b)
 let subtracti;
 function subtract(a, b)
 {
-   subtracti = a-b;
-   result=subtracti;
+
+    if(b>a && b>0 && a>0)
+    {
+     subtracti= (a-b);
+     result=subtracti;
+     console.log("c1");
+    }
+
+    else if(b<0 && a>0){
+     subtracti= (a-b);
+     result=-1*(subtracti);
+     console.log("c3");
+    
+    }
+    
+   else if(dispv1===result)
+    {
+     subtracti= -1*(a-b);
+     result=subtracti;
+     console.log("c4");
+    }
+
+    else{
+        subtracti= (a-b);
+        result=subtracti;
+        console.log("c2");
+    }
+   
+
+   
    return result;
 }
+
 let dividei;
 function divide(a, b)
 {
+
+    if(dispv1===result)
+    {
+   dividei = b/a; 
+    }
+    else{
     dividei = a/b;
+    }
     result=dividei;
     return result;
 }
@@ -87,63 +123,107 @@ console.log('Button 1 clicked');
 const minus = document.querySelector('#minus');
 minus.addEventListener('click',function()
 {
-    appendoperater='-';
-    displayop(appendoperater);
+    firstButtonClicked = true;
+    console.log(firstButtonClicked);
+    console.log('Button 1 for minus clicked');
+        appendoperater='-';
+        displayop(appendoperater);
+        console.log(firstButtonClicked);
 });
 
 const multiple = document.querySelector('#multiply');
 multiple.addEventListener('click',function()
 {
+    
+firstButtonClicked = true;
+console.log(firstButtonClicked);
+console.log('Button 1 clicked');
     appendoperater='*';
     displayop(appendoperater);
+    console.log(firstButtonClicked);
 });
 const division = document.querySelector('#divide');
 division.addEventListener('click',function()
 {
+    
+firstButtonClicked = true;
+console.log(firstButtonClicked);
+console.log('Button 1 clicked');
     appendoperater='/';
     displayop(appendoperater);
+    console.log(firstButtonClicked);
 });
 
 const del = document.querySelector('#del');
-del.addEventListener('click', deleteLastDigit())
+del.addEventListener('click', function()
+{
+    deleteLastDigit();
+});
 
 const btn1= document.querySelector('#one');
 btn1.addEventListener('click',function()
 {
-    firstButtonClicked = false;
     console.log(firstButtonClicked);
-   
+    if (firstButtonClicked) {
+        dispv1=result;
+    } 
+firstButtonClicked = false;
 
-
+if(dispv!==0 && count%2==0 && dispop===" ")
+{  
+    count--;
+    sd.innerHTML=' ';
+    appendinput=(dispv*10)+1;
+    dispv=appendinput;
+    console.log(appendinput);
+}
+else{
 appendinput=1;
+}
 displayval(appendinput);
 }
 );
 const btn2= document.querySelector('#two');
 btn2.addEventListener('click',function()
 {
-    firstButtonClicked = false;
-    console.log(firstButtonClicked='true');
+    console.log(firstButtonClicked);
     if (firstButtonClicked) {
         dispv1=result;
     } 
-
-console.log(firstButtonClicked);
+firstButtonClicked = false;
+if(dispv!==0 && count%2==0 && dispop===" ")
+{  
+    count--;
+    sd.innerHTML=' ';
+    appendinput=(dispv*10)+2;
+    dispv=appendinput;
+    console.log(appendinput);
+}
+else{
 appendinput=2;
+}
 displayval(appendinput);
 }
 );
 const btn3= document.querySelector('#three');
 btn3.addEventListener('click',function()
 {
-    firstButtonClicked = false;
     console.log(firstButtonClicked);
     if (firstButtonClicked) {
         dispv1=result;
     } 
-
-console.log(firstButtonClicked);
+firstButtonClicked = false;
+if(dispv!==0 &&count%2==0 && dispop===" ")
+{  
+    count--;
+    sd.innerHTML=' ';
+    appendinput=(dispv*10)+3;
+    dispv=appendinput;
+    console.log(appendinput);
+}
+else{
 appendinput=3;
+}
 displayval(appendinput);
 }
 );
@@ -154,10 +234,18 @@ btn4.addEventListener('click',function()
     if (firstButtonClicked) {
         dispv1=result;
     } 
-firstButtonClicked = false;
-console.log(firstButtonClicked);
-appendinput=4;
-displayval(appendinput);
+    if(dispv!==0 &&count%2==0  && dispop===" ")
+    {  
+        count--;
+        sd.innerHTML=' ';
+        appendinput=(dispv*10)+4;
+        dispv=appendinput;
+        console.log(appendinput);
+    }
+    else{
+    appendinput=4;
+    }
+    displayval(appendinput);
 }
 );
 const btn5= document.querySelector('#five');
@@ -166,13 +254,20 @@ btn5.addEventListener('click',function()
     if (firstButtonClicked) {
         dispv1=result;
     }
+    if(dispv!==0 &&count%2==0  && dispop===" ")
+    {  
+        count--;
+        sd.innerHTML=' ';
+        appendinput=(dispv*10)+5;
+        dispv=appendinput;
+        console.log(appendinput);
+    }
+    else{
+    appendinput=5;
+    }
+    displayval(appendinput);
+    }
 
-firstButtonClicked = false;
-console.log(firstButtonClicked);
-appendinput=5;
-displayval(appendinput);
-
-}
 );
 const btn6= document.querySelector('#six');
 btn6.addEventListener('click',function()
@@ -182,8 +277,17 @@ btn6.addEventListener('click',function()
         dispv1=result;
     } 
 firstButtonClicked = false;
-console.log(firstButtonClicked);
+if(dispv!==0 &&count%2==0  && dispop===" ")
+{  
+    count--;
+    sd.innerHTML=' ';
+    appendinput=(dispv*10)+6;
+    dispv=appendinput;
+    console.log(appendinput);
+}
+else{
 appendinput=6;
+}
 displayval(appendinput);
 }
 );
@@ -195,8 +299,17 @@ btn7.addEventListener('click',function()
         dispv1=result;
     } 
 firstButtonClicked = false;
-console.log(firstButtonClicked);
+if(dispv!==0 &&count%2==0  && dispop===" ")
+{  
+    count--;
+    sd.innerHTML=' ';
+    appendinput=(dispv*10)+7;
+    dispv=appendinput;
+    console.log(appendinput);
+}
+else{
 appendinput=7;
+}
 displayval(appendinput);
 }
 );
@@ -208,8 +321,17 @@ btn8.addEventListener('click',function()
         dispv1=result;
     } 
 firstButtonClicked = false;
-console.log(firstButtonClicked);
+if(dispv!==0 &&count%2==0  && dispop===" ")
+{  
+    count--;
+    sd.innerHTML=' ';
+    appendinput=(dispv*10)+8;
+    dispv=appendinput;
+    console.log(appendinput);
+}
+else{
 appendinput=8;
+}
 displayval(appendinput);
 }
 );
@@ -221,18 +343,41 @@ btn9.addEventListener('click',function()
         dispv1=result;
     } 
 firstButtonClicked = false;
-console.log(firstButtonClicked);
+if(dispv!==0 &&count%2==0  && dispop===" ")
+{  
+    count--;
+    sd.innerHTML=' ';
+    appendinput=(dispv*10)+9;
+    dispv=appendinput;
+    console.log(appendinput);
+}
+else{
 appendinput=9;
+}
 displayval(appendinput);
 }
 );
 const btn0= document.querySelector('#zero');
 btn0.addEventListener('click',function()
 {
+    console.log(firstButtonClicked);
+    if (firstButtonClicked) {
+        dispv1=result;
+    } 
+firstButtonClicked = false;
+if(dispv!==0 &&count%2==0  && dispop===" ")
+{  
+    count--;
+    sd.innerHTML=' ';
+    appendinput=(dispv*10)+0;
+    dispv=appendinput;
+    console.log(appendinput);
+}
+else{
 appendinput=0;
+}
 displayval(appendinput);
 });
-
 
 
 
@@ -287,13 +432,15 @@ function displayval(appendinput)
    {
     count++;
     dispv=appendinput;
-    sd.innerHTML+="<h4>" + dispv + "</h4>";
+    console.log("in the displayval function dispv is" + dispv)
+    sd.innerHTML+= dispv;
     return dispv;
    } 
    else if(count>0 && count%2==0) {
 
         count++;
         dispv1=appendinput;
+        console.log("in the displayval function dispv1 is" + dispv1)
         sd.innerHTML+="<h4>" + dispv1 + "</h4>";
         return dispv1;
     }
@@ -305,7 +452,9 @@ function displayval(appendinput)
       
 }
 
-/*let currentText;
+
+
+let currentText;
 function deleteLastDigit() {
     if(count===-1 && count%2!=0) {
         currentText= displayvaldot(appendinput);
@@ -315,13 +464,13 @@ function deleteLastDigit() {
    {
     count++;
     dispv=appendinput;
-    currentText= "<h4>" + dispv + "</h4>";
+    currentText=  dispv;
    } 
    else if(count>0 && count%2==0) {
 
         count++;
         dispv1=appendinput;
-        currentText=  "<h4>" + dispv1 + "</h4>";
+        currentText= dispv1;
         
     }
 
@@ -333,18 +482,20 @@ function deleteLastDigit() {
     if (currentText.length > 0) {
         // Remove the last character
         var newText = currentText.slice(0, -1);
+        console.log(newText);
         currentText = newText;
-        displayval(currentText);
+       sd.innerHTML+= currentText ;
     }
-}*/
+}
 
 let dispop=' ';
 function displayop(appendoperater)
 {
     if(appendoperater==='=')
     {
-        
-        //firstButtonClicked=false;
+        count=1;
+    
+        firstButtonClicked=false;
         displayresult();
         console.log(firstButtonClicked);
         //clearf();
@@ -368,6 +519,7 @@ console.log(dispv);
 console.log(dispv1);
 sd.innerHTML+= '=' + result;
 console.log(result);
+dispop=" ";
 
 }
 
@@ -377,6 +529,8 @@ console.log(result);
 
 function clearf()
 {
+    dispv=0;
+    dispv1=0;
     count=1;
     sd.innerHTML=' ';
    
