@@ -39,14 +39,26 @@ button:hover{
   background-color: #a9bffb;
 }
 
+#clear:hover{
+  background-color: #e12c2c;
+}
 
-#sd{
+#del:hover{
+  background-color: #e12c2c;
+}
+
+
+#answers{
   font-size:25px ;
-  color: azure;
+  color: rgb(255, 255, 255);
   display:flex;
   justify-content: center;
   flex-direction: row;  
-  align-items: center;
+  align-items: center; 
   height: 100vh;
   margin-top:-450px;
+
 }
+
+
+
